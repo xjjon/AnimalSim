@@ -1,38 +1,40 @@
 using UnityEngine;
-using AnimalSim.Assets.Scripts.Core.Animals;
 
-public class Needs : MonoBehaviour
+namespace Core.Animals
 {
-    [Header("Hunger System")]
-    [SerializeField, Range(0f, 100f)]
-    public float currentHunger = 0f;
-
-    private AnimalComponent animalComponent;
-
-    private void Awake()
+    public class Needs : MonoBehaviour
     {
-        animalComponent = GetComponent<AnimalComponent>();
-    }
+        [Header("Hunger System")]
+        [SerializeField, Range(0f, 100f)]
+        public float currentHunger = 0f;
 
-    public void Eat(float foodValue)
-    {
-        currentHunger = Mathf.Clamp(currentHunger - foodValue, 0f, 100f);
-    }
+        private AnimalComponent animalComponent;
 
-    public bool IsHungry(float hungerThreshold)
-    {
-        return (currentHunger / 100f) >= hungerThreshold;
-    }
-    
-    void Update()
-    {
-        if (animalComponent != null && animalComponent.Stats != null)
+        private void Awake()
         {
-            currentHunger += animalComponent.Stats.HungerDecreaseRate * Time.deltaTime;
+            animalComponent = GetComponent<AnimalComponent>();
+        }
 
-            if (currentHunger > 100f)
+        public void Eat(float foodValue)
+        {
+            currentHunger = Mathf.Clamp(currentHunger - foodValue, 0f, 100f);
+        }
+
+        public bool IsHungry(float hungerThreshold)
+        {
+            return (currentHunger / 100f) >= hungerThreshold;
+        }
+
+        void Update()
+        {
+            if (animalComponent != null && animalComponent.Stats != null)
             {
-                currentHunger = 100f;
+                currentHunger += animalComponent.Stats.HungerDecreaseRate * Time.deltaTime;
+
+                if (currentHunger > 100f)
+                {
+                    currentHunger = 100f;
+                }
             }
         }
     }

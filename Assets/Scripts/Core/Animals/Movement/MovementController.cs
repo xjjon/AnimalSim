@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace AnimalSim.Assets.Scripts.Core.Animals.Movement
+namespace Core.Animals.Movement
 {
     public class MovementController : MonoBehaviour
     {
@@ -10,7 +10,7 @@ namespace AnimalSim.Assets.Scripts.Core.Animals.Movement
         private float _moveSpeed;
         private float _runSpeed;
 
-    private UnityEngine.AI.NavMeshAgent navMeshAgent;
+    private NavMeshAgent navMeshAgent;
 
         private void Awake()
         {

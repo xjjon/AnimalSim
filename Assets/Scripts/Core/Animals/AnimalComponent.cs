@@ -1,7 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace AnimalSim.Assets.Scripts.Core.Animals
+namespace Core.Animals
 {
     public class AnimalComponent : MonoBehaviour
     {
