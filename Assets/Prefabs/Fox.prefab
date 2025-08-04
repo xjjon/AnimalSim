@@ -52,7 +52,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fox
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4545324904927583914, guid: 3b1c696c0930f8345a849b46db7990f7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -73,6 +74,26 @@ PrefabInstance:
     - target: {fileID: 4437164624940304045, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
       propertyPath: m_Name
       value: Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Height
+      value: 0.96796066
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Radius
+      value: 0.30318797
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.47143352
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1395993
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Direction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8794410748147613311, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
       propertyPath: m_LocalPosition.x

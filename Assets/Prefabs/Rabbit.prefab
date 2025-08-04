@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rabbit
       objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Height
+      value: 0.7174399
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Radius
+      value: 0.22995561
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.2700444
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Center.z
+      value: 0.038530946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151705170332320956, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: m_Direction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8794410748147613311, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -117,7 +137,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rabbit
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 840731402078780591, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -1,12 +1,33 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace AnimalSim.Assets.Scripts.Core.Animals.Movement
 {
-    public class MovementController
+    public class MovementController : MonoBehaviour
     {
-        
+        private AnimalComponent animalComponent;
+
+        private float _moveSpeed;
+        private float _runSpeed;
+
+    private UnityEngine.AI.NavMeshAgent navMeshAgent;
+
+        private void Awake()
+        {
+            animalComponent = GetComponent<AnimalComponent>();
+            navMeshAgent = GetComponent<NavMeshAgent>();
+            if (animalComponent != null && animalComponent.Stats != null)
+            {
+                _moveSpeed = animalComponent.Stats.MoveSpeed;
+                _runSpeed = animalComponent.Stats.RunSpeed;
+            }
+            navMeshAgent.speed = _moveSpeed;
+        }
+
+        public void SetTarget(Vector3 targetPosition)
+        {
+            navMeshAgent.SetDestination(targetPosition);
+        }
+
     }
 }
