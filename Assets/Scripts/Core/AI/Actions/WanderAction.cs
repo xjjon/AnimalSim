@@ -18,7 +18,6 @@ namespace Core.AI.Actions
             return base.OnInit();
         }
 
-    
         protected override void OnExecute()
         {
             Vector3 randomDirection = Random.insideUnitSphere * WanderRadius;
