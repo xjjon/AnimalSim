@@ -1,3 +1,4 @@
+using Core.Food;
 using UnityEngine;
 
 namespace Core.Animals
@@ -6,13 +7,17 @@ namespace Core.Animals
     {
         [Header("Hunger System")]
         [Range(0f, 100f)]
-        public float CurrentHunger = 100f;
+        public float CurrentHunger = 0;
 
-        private AnimalComponent animalComponent;
+        public FoodType FoodType;
+
+        private AnimalComponent _animalComponent;
+        private float _hungerThreshold;
 
         private void Awake()
         {
-            animalComponent = GetComponent<AnimalComponent>();
+            _animalComponent = GetComponent<AnimalComponent>();
+            _hungerThreshold = _animalComponent.Stats.HungerThreshold;
         }
 
         public void Eat(float foodValue)
@@ -20,14 +25,14 @@ namespace Core.Animals
             CurrentHunger = Mathf.Clamp(CurrentHunger - foodValue, 0f, 100f);
         }
 
-        public bool IsHungry(float hungerThreshold)
+        public bool IsHungry()
         {
-            return (CurrentHunger / 100f) >= hungerThreshold;
+            return (CurrentHunger / 100f) >= _hungerThreshold;
         }
 
         void Update()
         {
-            CurrentHunger += animalComponent.Stats.HungerDecreaseRate * Time.deltaTime;
+            CurrentHunger += _animalComponent.Stats.HungerDecreaseRate * Time.deltaTime;
 
             if (CurrentHunger > 100f)
             {

@@ -16,4 +16,4 @@ MonoBehaviour:
   RunSpeed: 6
   SightRadius: 5
   HungerThreshold: 0.3
-  HungerDecreaseRate: -1.67
+  HungerDecreaseRate: 1.67

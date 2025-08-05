@@ -10,11 +10,14 @@ namespace Core.Food
         public FoodType Type;
         public float EnergyValue;
 
-        public void ConsumeFood(AnimalComponent animal)
+        public float EatTime;
+
+        public float ConsumeFood(AnimalComponent animal)
         {
             animal.Needs.Eat(EnergyValue);
             OnFoodConsumed?.Invoke();
-            Destroy(gameObject);
+            Destroy(gameObject, EatTime);
+            return EatTime;
         }
     }
 }

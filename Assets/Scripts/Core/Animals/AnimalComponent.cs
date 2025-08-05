@@ -1,3 +1,4 @@
+using Core.Animals.Movement;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -9,5 +10,6 @@ namespace Core.Animals
         public AnimalStats Stats;
         [Title("Components")]
         public Needs Needs;
+        public MovementController Movement;
     }
 }

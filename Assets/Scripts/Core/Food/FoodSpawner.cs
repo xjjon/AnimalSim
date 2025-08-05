@@ -40,7 +40,7 @@ namespace AnimalSim.Assets.Scripts.Core.Food
                     _respawnTimer = 0f;
                 }
             }
-        } 
+        }
 
         private void SpawnFood()
         {
@@ -58,6 +58,7 @@ namespace AnimalSim.Assets.Scripts.Core.Food
                 _spawnedFood.Remove(food);
             };
             _spawnedFood.Add(food);
+            FoodManager.Instance.RegisterFood(food);
         }
 
         #if UNITY_EDITOR

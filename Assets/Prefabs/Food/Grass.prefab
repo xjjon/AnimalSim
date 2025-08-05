@@ -49,8 +49,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4312206099179367988, guid: a3f2e1b786d9f76469b7d457b3866a69, type: 3}
+      propertyPath: EatTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312206099179367988, guid: a3f2e1b786d9f76469b7d457b3866a69, type: 3}
       propertyPath: EnergyValue
-      value: 7
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8224243854812514876, guid: a3f2e1b786d9f76469b7d457b3866a69, type: 3}
       propertyPath: m_Name
