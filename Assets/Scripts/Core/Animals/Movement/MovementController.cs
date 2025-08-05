@@ -1,3 +1,4 @@
+using Core.Animation;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,7 +11,7 @@ namespace Core.Animals.Movement
         private float _moveSpeed;
         private float _runSpeed;
 
-    private NavMeshAgent navMeshAgent;
+        private NavMeshAgent navMeshAgent;
 
         private void Awake()
         {
@@ -27,6 +28,13 @@ namespace Core.Animals.Movement
         public void SetTarget(Vector3 targetPosition)
         {
             navMeshAgent.SetDestination(targetPosition);
+            animalComponent.Animator.PlayState(AnimalState.Walk);
+        }
+        
+        public void StopMovement()
+        {
+            navMeshAgent.ResetPath();
+            animalComponent.Animator.PlayState(AnimalState.Idle);
         }
 
     }

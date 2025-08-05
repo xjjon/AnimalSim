@@ -10,11 +10,11 @@ namespace Core.AI.Actions
         
         public float WanderRadius = 10f;
 
-        private NavMeshAgent _navMeshAgent;
+        private MovementController _movementController;
 
         protected override string OnInit()
         {
-            _navMeshAgent = agent.GetComponent<NavMeshAgent>();
+            _movementController = agent.GetComponent<MovementController>();
             return base.OnInit();
         }
 
@@ -26,7 +26,7 @@ namespace Core.AI.Actions
             NavMeshHit hit;
             NavMesh.SamplePosition(randomDirection, out hit, WanderRadius, NavMesh.AllAreas);
 
-            _navMeshAgent.SetDestination(hit.position);
+            _movementController.SetTarget(hit.position);
             EndAction(true);
         }
     }

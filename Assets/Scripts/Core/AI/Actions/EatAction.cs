@@ -1,4 +1,5 @@
 using Core.Animals;
+using Core.Animation;
 using Core.Food;
 using NodeCanvas.Framework;
 using UnityEngine;
@@ -30,6 +31,8 @@ namespace Core.AI.Actions
                 {
                     EndAction(true);
                 }
+                
+                _animalComponent.Animator.PlayState(AnimalState.Eat);
                 return;
             }
             EndAction(false);
@@ -42,6 +45,7 @@ namespace Core.AI.Actions
                 _eatTime -= Time.deltaTime;
                 if (_eatTime <= 0)
                 {
+                    _animalComponent.Animator.PlayState(AnimalState.Idle);
                     EndAction(true);
                 }
             }

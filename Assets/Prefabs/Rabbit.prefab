@@ -97,6 +97,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3123254135500316807}
     m_Modifications:
+    - target: {fileID: 840731402078780592, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 840731402078780593, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -145,10 +149,37 @@ PrefabInstance:
     - {fileID: 840731402078780591, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 840731402078780594, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4399224316069335701}
   m_SourcePrefab: {fileID: 100100000, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
 --- !u!4 &6410054721239057004 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 840731402078780593, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
   m_PrefabInstance: {fileID: 6007790976082312925}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &6410054721239057005 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 840731402078780592, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
+  m_PrefabInstance: {fileID: 6007790976082312925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6410054721239057007 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 840731402078780594, guid: 50bf0d89f095438448e61792c16f8bef, type: 3}
+  m_PrefabInstance: {fileID: 6007790976082312925}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4399224316069335701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6410054721239057007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad50f81b1d25c441943c37a89ba23f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Animator: {fileID: 6410054721239057005}
+  _ActionOnDisable: 0
