@@ -14,10 +14,10 @@ namespace AnimalSim.Assets.Scripts.Core.Food
         public int MaxFoodCount = 10;
         public int InitialFoodCount = 5;
 
-        public float RespawnInterval = 20f; 
+        public float RespawnInterval = 20f;
 
         private float _respawnTimer = 0f;
-    
+
 
         private List<FoodComponent> _spawnedFood = new List<FoodComponent>();
 
@@ -61,13 +61,22 @@ namespace AnimalSim.Assets.Scripts.Core.Food
             FoodManager.Instance.RegisterFood(food);
         }
 
-        #if UNITY_EDITOR
-            private void OnDrawGizmosSelected()
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireSphere(transform.position, SpawnRadius);
+        }
+
+        private void OnDrawGizmos()
+        {
+            string label = FoodPrefab != null ? FoodPrefab.name : "Food Spawner";
+            var style = new GUIStyle(UnityEditor.EditorStyles.boldLabel)
             {
-                Gizmos.color = Color.green;
-                Gizmos.DrawWireSphere(transform.position, SpawnRadius);
-            }
-        #endif
+                fontSize = 14,
+                normal = { textColor = Color.yellow }
+            };
+            UnityEditor.Handles.Label(transform.position + Vector3.up * 1.5f, label, style);
+        }
 
     }
 }
