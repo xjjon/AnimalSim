@@ -56,6 +56,7 @@ MonoBehaviour:
   Needs: {fileID: 1704431495659466845}
   Movement: {fileID: 6575526995715732816}
   Animator: {fileID: 7376333345212435327}
+  StateMachine: {fileID: 6414513712401716262}
 --- !u!114 &1704431495659466845
 MonoBehaviour:
   m_ObjectHideFlags: 0

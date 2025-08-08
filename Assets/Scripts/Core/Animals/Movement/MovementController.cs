@@ -8,6 +8,8 @@ namespace Core.Animals.Movement
     {
         private AnimalComponent animalComponent;
 
+        private Rigidbody _rigidbody;
+
         private float _moveSpeed;
         private float _runSpeed;
 
@@ -17,6 +19,7 @@ namespace Core.Animals.Movement
         {
             animalComponent = GetComponent<AnimalComponent>();
             navMeshAgent = GetComponent<NavMeshAgent>();
+            _rigidbody = GetComponent<Rigidbody>();
             if (animalComponent != null && animalComponent.Stats != null)
             {
                 _moveSpeed = animalComponent.Stats.MoveSpeed;
@@ -34,6 +37,11 @@ namespace Core.Animals.Movement
         public void StopMovement()
         {
             navMeshAgent.ResetPath();
+            navMeshAgent.velocity = Vector3.zero;
+            navMeshAgent.isStopped = true;
+            _rigidbody.linearVelocity = Vector3.zero;
+            _rigidbody.angularVelocity = Vector3.zero;
+
             animalComponent.Animator.PlayState(AnimalState.Idle);
         }
 
