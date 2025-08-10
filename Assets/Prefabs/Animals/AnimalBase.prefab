@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8794410748147613311}
   - component: {fileID: 2147000529862758517}
+  - component: {fileID: 927752880282236149}
   - component: {fileID: 1704431495659466845}
   - component: {fileID: 6575526995715732816}
   - component: {fileID: 7376333345212435327}
@@ -52,11 +53,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce0c428c3cb84942be84fddb95e120f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Stats: {fileID: 0}
+  AnimalData: {fileID: 0}
   Needs: {fileID: 1704431495659466845}
   Movement: {fileID: 6575526995715732816}
   Animator: {fileID: 7376333345212435327}
   StateMachine: {fileID: 6414513712401716262}
+--- !u!114 &927752880282236149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437164624940304045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fbb90586df641d5a98b64e5629de52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1704431495659466845
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,5 +17,9 @@ namespace AnimalSim.Assets.Scripts.Core.Animals
         [Title("Stats")]
         [Required, AssetSelector, InlineEditor(InlineEditorObjectFieldModes.Foldout)]
         public AnimalStats Stats;
+
+        public int MaxAge;
+
+        public int AdultAge;
     }
 }
