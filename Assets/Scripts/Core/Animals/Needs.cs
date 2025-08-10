@@ -19,7 +19,7 @@ namespace Core.Animals
         private void Awake()
         {
             _animalComponent = GetComponent<AnimalComponent>();
-            _hungerThreshold = _animalComponent.Stats.HungerThreshold;
+            _hungerThreshold = _animalComponent.AnimalData.Stats.HungerThreshold;
             _enabled = true;
         }
 
@@ -36,7 +36,7 @@ namespace Core.Animals
         void Update()
         {
             if (!_enabled) return;
-            CurrentHunger += _animalComponent.Stats.HungerDecreaseRate * Time.deltaTime;
+            CurrentHunger += _animalComponent.AnimalData.Stats.HungerDecreaseRate * Time.deltaTime;
 
             if (CurrentHunger > 100f)
             {

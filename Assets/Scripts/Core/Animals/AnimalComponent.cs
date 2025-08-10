@@ -1,4 +1,5 @@
 using System;
+using AnimalSim.Assets.Scripts.Core.Animals;
 using Core.Animals.Movement;
 using Core.Animation;
 using NodeCanvas.StateMachines;
@@ -13,7 +14,8 @@ namespace Core.Animals
         public Action OnAnimalDeath;
 
         [AssetSelector]
-        public AnimalStats Stats;
+        public AnimalData AnimalData;
+        
         [Title("Components")]
         public Needs Needs;
         public MovementController Movement;

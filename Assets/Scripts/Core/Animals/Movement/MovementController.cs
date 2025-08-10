@@ -20,10 +20,10 @@ namespace Core.Animals.Movement
             animalComponent = GetComponent<AnimalComponent>();
             navMeshAgent = GetComponent<NavMeshAgent>();
             _rigidbody = GetComponent<Rigidbody>();
-            if (animalComponent != null && animalComponent.Stats != null)
+            if (animalComponent != null && animalComponent.AnimalData.Stats != null)
             {
-                _moveSpeed = animalComponent.Stats.MoveSpeed;
-                _runSpeed = animalComponent.Stats.RunSpeed;
+                _moveSpeed = animalComponent.AnimalData.Stats.MoveSpeed;
+                _runSpeed = animalComponent.AnimalData.Stats.RunSpeed;
             }
             navMeshAgent.speed = _moveSpeed;
         }

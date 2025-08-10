@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: Stats
       value: 
       objectReference: {fileID: 11400000, guid: 597f38f1f90d54042acaca4849ef0dd9, type: 2}
+    - target: {fileID: 2147000529862758517, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
+      propertyPath: AnimalData
+      value: 
+      objectReference: {fileID: 11400000, guid: 63ae95d6245334d4ab6321bf55dba366, type: 2}
     - target: {fileID: 4437164624940304045, guid: 80ebf205842a06f448e7ce902ffb3cc5, type: 3}
       propertyPath: m_Name
       value: Rabbit
