@@ -1,10 +1,15 @@
+using System;
 using UnityEngine;
 
 namespace Core.Animals
 {
     public class AgeComponent : MonoBehaviour
     {
+        public Action OnBecomeAdult;
+
         private static float TimePerYear = 20f;
+
+        public bool IsAdult => _currentAge >= _animalComponent.AnimalData.AdultAge;
 
         private AnimalComponent _animalComponent;
 
@@ -26,6 +31,12 @@ namespace Core.Animals
                 {
                     Debug.Log($"{_animalComponent.AnimalData.AnimalName} has reached its maximum age of {_animalComponent.AnimalData.MaxAge} years and will be removed from the simulation.");
                     _animalComponent.Kill();
+                    return;
+                }
+
+                if (_currentAge == _animalComponent.AnimalData.AdultAge)
+                {
+                    OnBecomeAdult?.Invoke();
                 }
             }
         }

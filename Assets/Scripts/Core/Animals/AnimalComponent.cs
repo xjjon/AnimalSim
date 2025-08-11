@@ -1,6 +1,7 @@
 using System;
 using AnimalSim.Assets.Scripts.Core.Animals;
 using Core.Animals.Movement;
+using Core.Animals.Reproduction;
 using Core.Animation;
 using NodeCanvas.StateMachines;
 using Sirenix.OdinInspector;
@@ -21,7 +22,10 @@ namespace Core.Animals
         public MovementController Movement;
 
         public AnimatorController Animator;
-        
+
+        public AgeComponent AgeComponent; 
+
+        public ReproductionComponent ReproductionComponent;
         public FSMOwner StateMachine;
 
         public void Kill()
