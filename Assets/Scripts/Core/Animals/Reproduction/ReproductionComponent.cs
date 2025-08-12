@@ -1,3 +1,4 @@
+using Core.State;
 using UnityEngine;
 
 namespace Core.Animals.Reproduction
@@ -56,6 +57,12 @@ namespace Core.Animals.Reproduction
 
         private void HandlePregnancyComplete()
         {
+            var childCount = _animalComponent.AnimalData.Reproduction.ChildCountRange.GetRandomValue();
+            for (int i = 0; i < childCount; i++)
+            {
+                AnimalManager.Instance.SpawnAnimal(_animalComponent.AnimalData);
+            }
+        
             CurrentState = ReproductionState.Ready;
         }
 
