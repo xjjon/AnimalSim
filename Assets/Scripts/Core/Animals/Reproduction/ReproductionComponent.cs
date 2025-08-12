@@ -9,9 +9,10 @@ namespace Core.Animals.Reproduction
 
         public Gender Gender { get; private set; }
 
-        private bool _canReproduce;
+        public bool CanReproduce => CurrentState == ReproductionState.Ready;
+        public ReproductionState CurrentState { get; private set; } = ReproductionState.NotReady;
 
-        private float _timeUntilNextReproduction;
+        private float _timer;
 
         private void Awake()
         {
@@ -26,15 +27,56 @@ namespace Core.Animals.Reproduction
 
         private void HandleBecomeAdult()
         {
-            _canReproduce = true;
-            // TODO: Implement reproduction logic and stats
+            CurrentState = ReproductionState.Ready;
         }
 
+        public void StartPregnancy()
+        {
+            if (!CanReproduce) return;
+            CurrentState = ReproductionState.Pregnant;
+            _timer = _animalComponent.AnimalData.Reproduction.PregnancyDuration;
+        }
+
+        void Update()
+        {
+            if (CurrentState == ReproductionState.Ready
+            || CurrentState == ReproductionState.NotReady) return;
+            _timer += Time.deltaTime;
+            if (_timer > 0) return;
+            switch (CurrentState)
+            {
+                case ReproductionState.Pregnant:
+                    HandlePregnancyComplete();
+                    break;
+                case ReproductionState.PregnancyCooldown:
+                    HandlePregnancyCooldownComplete();
+                    break;
+            }
+        }
+
+        private void HandlePregnancyComplete()
+        {
+            CurrentState = ReproductionState.Ready;
+        }
+
+        private void HandlePregnancyCooldownComplete()
+        {
+            CurrentState = ReproductionState.Ready;
+            _timer = 0f;
+        }
     }
 
     public enum Gender
     {
         Male,
         Female
+    }
+
+    public enum ReproductionState
+    {
+        NotReady,
+        Ready,
+        Pregnant,
+        PregnancyCooldown,
     }
 }

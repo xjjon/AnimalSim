@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 using Core.Animals;
+using Core.Animals.Reproduction;
 
 namespace AnimalSim.Assets.Scripts.Core.Animals
 {
@@ -21,5 +22,7 @@ namespace AnimalSim.Assets.Scripts.Core.Animals
         public int MaxAge;
 
         public int AdultAge;
+
+        public ReproductionStats Reproduction = new ReproductionStats();
     }
 }
