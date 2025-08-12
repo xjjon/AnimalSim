@@ -11,9 +11,18 @@ namespace Core.State
 
         void Start()
         {
-            _animals.AddRange(FindObjectsByType<AnimalComponent>(FindObjectsSortMode.None));
+            foreach (var animal in FindObjectsByType<AnimalComponent>(FindObjectsSortMode.None))
+            {
+                RegisterAnimal(animal);
+            }
         }
 
+        public AnimalComponent SpawnAnimal(AnimalData animalData)
+        {
+            var animal = Instantiate(animalData.Prefab, Vector3.zero, Quaternion.identity);
+            RegisterAnimal(animal);
+            return animal;
+        }
 
         public void RegisterAnimal(AnimalComponent animal)
         {

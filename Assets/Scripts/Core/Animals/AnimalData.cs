@@ -1,9 +1,8 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
-using Core.Animals;
 using Core.Animals.Reproduction;
 
-namespace AnimalSim.Assets.Scripts.Core.Animals
+namespace Core.Animals
 {
     [CreateAssetMenu(fileName = "New Animal", menuName = "Animals/Animal Data")]
     public class AnimalData : SerializedScriptableObject

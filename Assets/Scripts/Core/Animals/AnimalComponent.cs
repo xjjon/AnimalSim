@@ -1,5 +1,4 @@
 using System;
-using AnimalSim.Assets.Scripts.Core.Animals;
 using Core.Animals.Movement;
 using Core.Animals.Reproduction;
 using Core.Animation;
