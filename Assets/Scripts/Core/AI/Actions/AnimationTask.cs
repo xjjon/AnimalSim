@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Core.Animation;
 using NodeCanvas.Framework;
 
-namespace AnimalSim.Assets.Scripts.Core.AI.Actions
+namespace ACore.AI.Actions
 {
     public class AnimationTask : ActionTask
     {

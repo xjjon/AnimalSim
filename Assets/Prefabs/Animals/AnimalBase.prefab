@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6015846406975281368}
   - component: {fileID: 6414513712401716262}
   - component: {fileID: 4884172638310667222}
+  - component: {fileID: 2811963845317210352}
   m_Layer: 0
   m_Name: AnimalBase
   m_TagString: Untagged
@@ -57,6 +58,8 @@ MonoBehaviour:
   Needs: {fileID: 1704431495659466845}
   Movement: {fileID: 6575526995715732816}
   Animator: {fileID: 7376333345212435327}
+  AgeComponent: {fileID: 927752880282236149}
+  ReproductionComponent: {fileID: 2811963845317210352}
   StateMachine: {fileID: 6414513712401716262}
 --- !u!114 &927752880282236149
 MonoBehaviour:
@@ -226,3 +229,16 @@ MonoBehaviour:
   _serializedBlackboard: '{"_variables":{}}'
   _objectReferences: []
   _serializedVariables: []
+--- !u!114 &2811963845317210352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437164624940304045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d313977d0a7f7440e904ab6ed8e70642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animalComponent: {fileID: 0}

@@ -20,9 +20,36 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: Reproduction
+      Entry: 7
+      Data: 0|Core.Animals.Reproduction.ReproductionStats, Assembly-CSharp
+    - Name: MateTime
+      Entry: 4
+      Data: 0
+    - Name: MateCooldownTime
+      Entry: 4
+      Data: 0
+    - Name: PregnancyDuration
+      Entry: 3
+      Data: 0
+    - Name: ChildCountRange
+      Entry: 7
+      Data: 1|Util.IntRange, Assembly-CSharp
+    - Name: Min
+      Entry: 3
+      Data: 0
+    - Name: Max
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   AnimalName: Rabbit
   Prefab: {fileID: 5521324593529785997, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
   Stats: {fileID: 11400000, guid: 597f38f1f90d54042acaca4849ef0dd9, type: 2}
-  MaxAge: 1
+  MaxAge: 20
   AdultAge: 1

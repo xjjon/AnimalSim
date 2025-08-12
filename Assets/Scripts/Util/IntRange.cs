@@ -2,8 +2,10 @@ namespace Util
 {
     public class IntRange
     {
-        public int Min { get; set; }
-        public int Max { get; set; }
+        public int Min;
+        public int Max;
+
+        public IntRange() : this(0, 1) { }
 
         public IntRange(int min, int max)
         {
