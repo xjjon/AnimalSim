@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "AnimalSim.sln"
+    "dotnet.defaultSolution": "AnimalSim.sln",
+    "kiroAgent.configureMCP": "Disabled"
 }
