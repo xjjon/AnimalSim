@@ -3,7 +3,7 @@ using NodeCanvas.Framework;
 
 namespace Core.AI.Conditions
 {
-    public class AnimalCondition : ConditionTask
+    public abstract class AnimalCondition : ConditionTask
     {
         protected AnimalComponent AnimalComponent;
 

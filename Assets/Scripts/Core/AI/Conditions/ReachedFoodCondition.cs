@@ -10,11 +10,6 @@ namespace Core.AI.Conditions
         [BlackboardOnly]
         public BBParameter<FoodComponent> TargetFood;
 
-        protected override string OnInit()
-        {
-            return base.OnInit();
-        }
-
         protected override bool OnCheck()
         {
             if (TargetFood.value == null)

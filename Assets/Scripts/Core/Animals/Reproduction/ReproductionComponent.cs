@@ -31,11 +31,22 @@ namespace Core.Animals.Reproduction
             CurrentState = ReproductionState.Ready;
         }
 
-        public void StartPregnancy()
+        public bool StartPregnancy()
         {
-            if (!CanReproduce) return;
+            if (!CanReproduce) return false;
             CurrentState = ReproductionState.Pregnant;
             _timer = _animalComponent.AnimalData.Reproduction.PregnancyDuration;
+            return true;
+        }
+
+        public void AttemptMate(ReproductionComponent mate)
+        {
+            if (CurrentState == ReproductionState.Ready || mate.Gender == Gender.Male)
+            {
+                return;
+            }
+            var status = mate.StartPregnancy();
+            Debug.Log($"Attempting to mate with {mate.name}. Success: {status}");
         }
 
         void Update()
@@ -83,7 +94,7 @@ namespace Core.Animals.Reproduction
     {
         NotReady,
         Ready,
-        Pregnant,
-        PregnancyCooldown,
+        Pregnant, // only used by females
+        PregnancyCooldown, // only used by females
     }
 }
