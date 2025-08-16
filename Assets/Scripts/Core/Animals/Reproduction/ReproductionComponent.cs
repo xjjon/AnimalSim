@@ -1,4 +1,5 @@
 using Core.State;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Core.Animals.Reproduction
@@ -10,6 +11,11 @@ namespace Core.Animals.Reproduction
 
         public Gender Gender { get; private set; }
 
+        [Title("Debug"), SerializeField]
+        private bool _setGender;
+        [SerializeField]
+        private Gender _debugGender;
+
         public bool CanReproduce => CurrentState == ReproductionState.Ready;
         public ReproductionState CurrentState { get; private set; } = ReproductionState.NotReady;
 
@@ -19,6 +25,11 @@ namespace Core.Animals.Reproduction
         {
             _animalComponent = GetComponent<AnimalComponent>();
             Gender = Random.value > 0.5f ? Gender.Male : Gender.Female;
+
+            if (_setGender)
+            {
+                Gender = _debugGender;
+            }
         }
 
         private void Start()
