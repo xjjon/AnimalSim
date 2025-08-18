@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Core.Animals
@@ -7,6 +8,11 @@ namespace Core.Animals
     {
         public Action OnBecomeAdult;
 
+        [Title("Debug"), SerializeField]
+        private bool _setAge;
+
+        [SerializeField, ShowIf("_setAge")]
+        private int _debugAgeInTime;
         private static float TimePerYear = 20f;
 
         public bool IsAdult => _currentAge >= _animalComponent.AnimalData.AdultAge;
@@ -19,6 +25,11 @@ namespace Core.Animals
         void Awake()
         {
             _animalComponent = GetComponent<AnimalComponent>();
+            if (_setAge)
+            {
+                _currentYearTimer = _debugAgeInTime % TimePerYear;
+                _currentAge = (int)(_debugAgeInTime / TimePerYear);
+            }
         }
         private void Update()
         {
