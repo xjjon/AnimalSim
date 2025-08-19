@@ -30347,6 +30347,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8292296469400318751, guid: 1c06eb4e970a3ed43872bf78aae3379f, type: 3}
   m_PrefabInstance: {fileID: 258923921}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &259022273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 212.63855
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.4521446
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42.84778
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123254135500316807, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752031335778511373, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _setAge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752031335778511373, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _debugAgeInTime
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838510041409525845, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: m_Name
+      value: Rabbit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525904350569868808, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _setGender
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525904350569868808, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _debugGender
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
 --- !u!1001 &259022421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218873,9 +218946,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6752031335778511373, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _setAge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6752031335778511373, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _debugAgeInTime
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 7838510041409525845, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
       propertyPath: m_Name
       value: Rabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8525904350569868808, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
+      propertyPath: _setGender
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -246773,3 +246858,4 @@ SceneRoots:
   - {fileID: 737098718}
   - {fileID: 1797257730}
   - {fileID: 1903579627}
+  - {fileID: 259022273}

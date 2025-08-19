@@ -28,6 +28,7 @@ namespace Core.AI.Actions.Movement
             float searchRadiusSqr = SearchRadius * SearchRadius;
             foreach (var mate in potentialMates)
             {
+                if (!mate.ReproductionComponent.CanReproduce) continue;
                 if ((_animalComponent.transform.position - mate.transform.position).sqrMagnitude <= searchRadiusSqr)
                 {
                     TargetMate.value = mate;

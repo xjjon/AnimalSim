@@ -13,7 +13,7 @@ namespace Core.Animals.Reproduction
 
         [Title("Debug"), SerializeField]
         private bool _setGender;
-        [SerializeField]
+        [SerializeField, ShowIf("_setGender")]
         private Gender _debugGender;
 
         public bool CanReproduce => CurrentState == ReproductionState.Ready;
@@ -30,6 +30,8 @@ namespace Core.Animals.Reproduction
             {
                 Gender = _debugGender;
             }
+
+            gameObject.name = (Gender == Gender.Male ? "M" : "F") + gameObject.name;
         }
 
         private void Start()
@@ -50,21 +52,21 @@ namespace Core.Animals.Reproduction
             return true;
         }
 
-        public void AttemptMate(ReproductionComponent mate)
+        public void AttemptMate(ReproductionComponent target)
         {
-            if (CurrentState == ReproductionState.Ready || mate.Gender == Gender.Male)
+            if (CurrentState != ReproductionState.Ready || target.Gender == Gender.Male)
             {
                 return;
             }
-            var status = mate.StartPregnancy();
-            Debug.Log($"Attempting to mate with {mate.name}. Success: {status}");
+            var status = target.StartPregnancy();
+            Debug.Log($"Attempting to mate with {target.name}. Success: {status}");
         }
 
         void Update()
         {
             if (CurrentState == ReproductionState.Ready
             || CurrentState == ReproductionState.NotReady) return;
-            _timer += Time.deltaTime;
+            _timer -= Time.deltaTime;
             if (_timer > 0) return;
             switch (CurrentState)
             {
@@ -82,7 +84,7 @@ namespace Core.Animals.Reproduction
             var childCount = _animalComponent.AnimalData.Reproduction.ChildCountRange.GetRandomValue();
             for (int i = 0; i < childCount; i++)
             {
-                AnimalManager.Instance.SpawnAnimal(_animalComponent.AnimalData);
+                AnimalManager.Instance.SpawnAnimal(_animalComponent.AnimalData, transform.position);
             }
         
             CurrentState = ReproductionState.Ready;

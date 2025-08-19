@@ -1,4 +1,3 @@
-
 using Core.Animals;
 using NodeCanvas.Framework;
 
@@ -15,7 +14,7 @@ namespace Core.AI.Conditions
             {
                 return false;
             }
-            return (agent.transform.position - TargetAnimal.value.transform.position).sqrMagnitude < 1f * 1f;
+            return (agent.transform.position - TargetAnimal.value.transform.position).sqrMagnitude < 1.5f * 1.5f;
         }
     }
 }

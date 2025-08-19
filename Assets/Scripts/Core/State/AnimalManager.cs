@@ -23,9 +23,10 @@ namespace Core.State
             }
         }
 
-        public AnimalComponent SpawnAnimal(AnimalData animalData)
+        public AnimalComponent SpawnAnimal(AnimalData animalData, Vector3 position)
         {
-            var animal = Instantiate(animalData.Prefab, Vector3.zero, Quaternion.identity);
+            position.y = RaycastUtils.GetGroundHeight(position);
+            var animal = Instantiate(animalData.Prefab, position, Quaternion.identity);
             RegisterAnimal(animal);
             return animal;
         }
