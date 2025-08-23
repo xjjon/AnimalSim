@@ -1,6 +1,7 @@
 
 
 using Core.Animals;
+using Core.Player.Currency;
 using Core.Player.Inputs;
 using Core.State;
 using UnityEngine;
@@ -15,16 +16,22 @@ namespace Core.Player
         private AnimalData _selectedAnimal;
 
         private float _lastClickTime;
+        private CurrencyHolder _currencyHolder;
 
         void Start()
         {
             _inputControl.OnClick += HandleClick;
             _selectedAnimal = AnimalDB.Instance.Animals[0];
+            _currencyHolder = GameManager.Instance.PlayerCurrency;
         }
 
         private void HandleClick(Vector3 position)
         {
             if (Time.time - _lastClickTime < 0.5f)
+            {
+                return;
+            }
+            if (!_currencyHolder.TrySpend(CurrencyType.Mana, _selectedAnimal.Cost))
             {
                 return;
             }

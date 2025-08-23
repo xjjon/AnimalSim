@@ -10,6 +10,8 @@ namespace Core.Animals
         [Required]
         public string AnimalName;
 
+        public int Cost = 1;
+
         [Title("Prefab")]
         [Required, AssetSelector(Paths = "Assets/Prefabs/Animals")]
         public AnimalComponent Prefab;

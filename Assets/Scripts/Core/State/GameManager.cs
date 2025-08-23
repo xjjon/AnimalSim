@@ -11,6 +11,7 @@ namespace Core.State
         {
             base.Awake();
             PlayerCurrency = new CurrencyHolder();
+            PlayerCurrency.Set(CurrencyType.Mana, 10);
         }
     }
 }
