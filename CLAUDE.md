@@ -4,7 +4,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AnimalSim is a Unity 6000.0.24f1 project that simulates animal behavior using AI systems. It features reproduction, hunger, movement, and age mechanics in a 3D environment using Universal Render Pipeline (URP).
+This is a god-game ecosystem simulator where the player's goal is to build a balanced, self-sustaining world.
+
+Core Gameplay:
+The player acts as an observer and indirect influencer. Instead of directly controlling animals, the player introduces species and manipulates the environment by adding resources (plants, water) or triggering events (droughts, fires). The core challenge is to create a stable ecosystem from a limited set of starting species.
+
+Player Engagement:
+
+    Observation: Players are encouraged to watch the simulation unfold. Mechanics include a research journal to unlock animal information, photo mode challenges for capturing specific behaviors, and a lineage tracker to follow generations of a single animal.
+
+    Influence: The main interaction is through indirect means. Players can introduce new flora/fauna, alter the terrain, and control time (fast-forward/rewind) to see the long-term consequences of their actions.
+
+    Scenarios: Gameplay is structured around objectives, such as restoring a barren environment or saving an existing ecosystem from a crisis like an invasive species or a natural disaster.
+
+Underlying Systems:
+The simulation is driven by an AI where animals act based on needs (hunger, thirst, fear). The world is managed by systems that control population dynamics, resource growth/decay, and a day/night/season cycle that impacts animal behavior.
 
 ## Development Commands
 
