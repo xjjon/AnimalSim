@@ -19,6 +19,7 @@ namespace Core.AI.Actions
             }
 
             AnimalComponent.ReproductionComponent.AttemptMate(TargetAnimal.value.ReproductionComponent);
+            TargetAnimal.value = null;
             EndAction(true);
         }
     }

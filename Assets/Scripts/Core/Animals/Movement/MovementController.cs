@@ -30,6 +30,8 @@ namespace Core.Animals.Movement
 
         public void SetTarget(Vector3 targetPosition)
         {
+            _rigidbody.constraints = RigidbodyConstraints.None;
+            navMeshAgent.isStopped = false;
             navMeshAgent.SetDestination(targetPosition);
             animalComponent.Animator.PlayState(AnimalState.Walk);
         }
@@ -41,6 +43,7 @@ namespace Core.Animals.Movement
             navMeshAgent.isStopped = true;
             _rigidbody.linearVelocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
+            _rigidbody.constraints = RigidbodyConstraints.FreezePosition;
 
             animalComponent.Animator.PlayState(AnimalState.Idle);
         }
