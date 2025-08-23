@@ -215588,6 +215588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1880146855}
+  - component: {fileID: 1880146856}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -215623,6 +215624,27 @@ Transform:
   - {fileID: 1450448485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880146856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880146854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2a00d68f0ae703478f1e325ab7f6254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
 --- !u!1001 &1880549071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -246940,6 +246962,6 @@ SceneRoots:
   - {fileID: 1067723469}
   - {fileID: 737098718}
   - {fileID: 1797257730}
+  - {fileID: 980790653}
   - {fileID: 1903579627}
   - {fileID: 259022273}
-  - {fileID: 980790653}
