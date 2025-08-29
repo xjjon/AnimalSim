@@ -77,6 +77,10 @@ AnimalComponent (Main Entity)
 4. **Event-Driven Systems**: Life cycle events for aging and reproduction
 5. **Spatial Queries**: Efficient neighbor finding for AI behaviors
 
+### Naming Conventions
+
+- Private variables should be like _camelCase
+
 ## Third-Party Dependencies
 
 **Essential Asset Store Tools:**
