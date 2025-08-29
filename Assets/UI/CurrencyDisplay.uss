@@ -1,0 +1,29 @@
+.currency-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.currency-label {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    margin-right: 8px;
+    -unity-font-style: bold;
+}
+
+.currency-value {
+    font-size: 16px;
+    color: rgb(100, 200, 255);
+    -unity-font-style: bold;
+    min-width: 50px;
+    -unity-text-align: middle-right;
+}
