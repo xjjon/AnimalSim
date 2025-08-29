@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/CurrencyDisplay.uss?fileID=7433441132597879392&amp;guid=8ed84535ee162ab47bd63a07076d9816&amp;type=3#CurrencyDisplay" />
+    <ui:VisualElement name="currency-container" class="currency-container">
+        <ui:Label text="Mana:" name="currency-label" class="currency-label" style="white-space: pre-wrap;" />
+        <ui:Label text="0" name="currency-value" class="currency-value" />
+    </ui:VisualElement>
+</ui:UXML>
