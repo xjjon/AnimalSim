@@ -1,9 +1,8 @@
-
-
 using Core.Animals;
 using Core.Player.Currency;
 using Core.Player.Inputs;
 using Core.State;
+using UI;
 using UnityEngine;
 
 namespace Core.Player
@@ -13,6 +12,9 @@ namespace Core.Player
         [SerializeField]
         private InputController _inputControl;
 
+        [SerializeField]
+        private AnimalToolbarController _toolbarController;
+
         private AnimalData _selectedAnimal;
 
         private float _lastClickTime;
@@ -21,12 +23,19 @@ namespace Core.Player
         void Start()
         {
             _inputControl.OnClick += HandleClick;
-            _selectedAnimal = AnimalDB.Instance.Animals[0];
+            _toolbarController.OnAnimalSelected += HandleAnimalSelected;
             _currencyHolder = GameManager.Instance.PlayerCurrency;
+        }
+
+        private void HandleAnimalSelected(AnimalData animalData)
+        {
+            _selectedAnimal = animalData;
         }
 
         private void HandleClick(Vector3 position)
         {
+            if (_selectedAnimal == null) return;
+            
             if (Time.time - _lastClickTime < 0.5f)
             {
                 return;
