@@ -100,10 +100,14 @@ Assets/Scripts/Core/
 ├── Food/           # Food system
 └── State/          # Global managers
 
+Assets/Scripts/UI   # UI related components and code
+
 Assets/Data/         # ScriptableObject configurations
 ├── AnimalStats/    # Species configurations
 ├── Animals/        # Animal prefab data
 └── Behaviors/      # AI behavior assets
+
+UI/                 # UI Toolkit related files
 ```
 
 ## Development Guidelines

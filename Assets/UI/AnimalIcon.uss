@@ -1,0 +1,7 @@
+.animal-icon-root {
+    transition: scale 0.15s ease-in-out;
+}
+
+.animal-icon-root:hover {
+    scale: 1.1 1.1;
+}

@@ -116661,7 +116661,7 @@ GameObject:
   - component: {fileID: 1022831492}
   - component: {fileID: 1022831494}
   m_Layer: 5
-  m_Name: UIDocument
+  m_Name: CurrencyDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162257,6 +162257,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7764212116854129965, guid: d2d5bfbbdbac9214397fef89eb7ee853, type: 3}
   m_PrefabInstance: {fileID: 337226662}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1435848740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435848743}
+  - component: {fileID: 1435848742}
+  - component: {fileID: 1435848741}
+  m_Layer: 5
+  m_Name: SpawnToolbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1435848741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435848740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8adabfa4b831d9c40ae0fb76c9a978d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ToolbarDocument: {fileID: 1435848742}
+  AnimalIconAsset: {fileID: 9197481963319205126, guid: d54bfdd331d6adf4395457fb9471172d, type: 3}
+--- !u!114 &1435848742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435848740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 8195e6279a78c80448b4ef1822017eb1, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 086b6d49c8b3c6a4e983fc1dcae3041a, type: 3}
+  m_SortingOrder: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+--- !u!4 &1435848743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435848740}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1435953213 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1291779440398765513, guid: 7f98bd6e451b28e4eb8e1655e1e0aa4c, type: 3}
@@ -247031,3 +247097,4 @@ SceneRoots:
   - {fileID: 1903579627}
   - {fileID: 259022273}
   - {fileID: 1022831493}
+  - {fileID: 1435848743}

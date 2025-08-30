@@ -12,6 +12,9 @@ namespace Core.Animals
 
         public int Cost = 1;
 
+        [PreviewField(Height = 100)]
+        public Sprite Icon;
+
         [Title("Prefab")]
         [Required, AssetSelector(Paths = "Assets/Prefabs/Animals")]
         public AnimalComponent Prefab;

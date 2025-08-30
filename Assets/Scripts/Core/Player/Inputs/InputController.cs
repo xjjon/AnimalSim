@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UIElements;
 
 namespace Core.Player.Inputs
 {
@@ -16,6 +18,11 @@ namespace Core.Player.Inputs
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    return;
+                }
+                
                 OnClick?.Invoke(GetGroundPosition(Input.mousePosition));
             }
         }

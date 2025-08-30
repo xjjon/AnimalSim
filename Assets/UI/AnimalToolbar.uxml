@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <ui:VisualElement name="AnimalToolbar" style="flex-direction: row; justify-content: center; align-items: center; position: absolute; bottom: 10px; width: 100%;">
+        <ui:VisualElement name="AnimalButtons" style="flex-direction: row;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -49,6 +49,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   AnimalName: Rabbit
+  Cost: 1
+  Icon: {fileID: 21300000, guid: 75c9de8b29150024b9c17c580a36e0de, type: 3}
   Prefab: {fileID: 5521324593529785997, guid: 2abfddc180083034e86cc89fa7b8aafe, type: 3}
   Stats: {fileID: 11400000, guid: 597f38f1f90d54042acaca4849ef0dd9, type: 2}
   MaxAge: 20

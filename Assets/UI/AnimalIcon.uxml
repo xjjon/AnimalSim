@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:Style src="AnimalIcon.uss" />
+    <ui:VisualElement name="AnimalIcon" class="animal-icon-root" style="width: 75px; height: 75px; margin-left: 5px; margin-right: 5px; background-color: rgba(0, 0, 0, 0.5); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+        <ui:VisualElement name="Icon" style="flex-grow: 1; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin-left: 2px; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;" />
+        <ui:Label name="Cost" text="$0" style="position: absolute; bottom: 0; right: 0; color: white; background-color: rgba(0, 0, 0, 0.7); padding: 2px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;" />
+    </ui:VisualElement>
+</ui:UXML>
